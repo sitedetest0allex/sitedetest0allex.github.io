@@ -1,7 +1,55 @@
-body {
-	background-color: #222;
+.container {
+	margin: 0 auto;
+	width: 400px;
+	text-align: center;
+	color: #fff;
 }
 
-canvas {
-	border: 1px solid #fff;
+h1 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+.board {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.row {
+	clear: both;
+}
+
+.cell {
+	float: left;
+	width: 100px;
+	height: 100px;
+	background-color: #ddd;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	font-size: 60px;
+	line-height: 100px;
+	cursor: pointer;
+}
+
+.cell:hover {
+	background-color: #ccc;
+}
+
+.status {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+#reset {
+	background-color: #1abc9c;
+	border: none;
+	color: #fff;
+	padding: 10px 20px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#reset:hover {
+	background-color: #16a085;
 }
