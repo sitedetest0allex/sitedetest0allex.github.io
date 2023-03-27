@@ -1,17 +1,28 @@
+<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="styles.css">
+    <title>Gerador de Imagens de Carros Esportivos</title>
 </head>
-<body>
-
-<div class="cube">
-  <div class="front"></div>
-  <div class="back"></div>
-  <div class="top"></div>
-  <div class="bottom"></div>
-  <div class="left"></div>
-  <div class="right"></div>
-</div>
-
+<body id="body">
+    <button onclick="generateImage()">Gerar Imagem</button>
+    <img id="carImage" src="" alt="Imagem de Carro Esportivo">
+    <script>
+        let carImages = [
+            "https://example.com/car1.jpg",
+            "https://example.com/car2.jpg",
+            "https://example.com/car3.jpg"
+        ];
+        let body = document.getElementById("body");
+        let carImage = document.getElementById("carImage");
+        function generateImage() {
+            let randomIndex = Math.floor(Math.random() * carImages.length);
+            carImage.src = carImages[randomIndex];
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            body.style.backgroundColor = `rgb(${r},${g},${b})`;
+        }
+    </script>
 </body>
 </html>
+Este código cria um botão que, quando clicado, seleciona uma imagem aleatória de um carro esportivo de uma matriz de URLs de imagem e a exibe na página. Também gera valores aleatórios para as cores vermelho, verde e azul (RGB) e altera a cor de fundo do corpo da página para essa cor.
