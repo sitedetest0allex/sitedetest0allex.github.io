@@ -1,23 +1,101 @@
-<div class="container">
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>A Vida é uma Jornada Sem Fim</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f7f7f7;
+			color: #333;
+			transition: all 0.3s ease;
+		}
 
-<div class="poem">
-  <h2>A Vida é uma Jornada Sem Fim</h2>
-  <p>Com altos e baixos, começos e fins.</p>
-  <p>É uma história que se escreve dia a dia</p>
-  <p>Com momentos de riso e de melancolia.</p>
-  <p>Nessa viagem, a cada novo amanhecer,</p>
-  <p>Aprendemos a amar, a sorrir e a viver.</p>
-  <p>Com cada passo, descobrimos nosso caminho,</p>
-  <p>E seguimos em frente, rumo ao nosso destino.</p>
-</div>
+		body.dark {
+			background-color: #333;
+			color: #f7f7f7;
+		}
 
-<div class="toggle-container">
-  <input type="checkbox" id="toggle">
-  <label for="toggle" class="toggle-label"></label>
-  <div class="toggle-ball"></div>
-</div>
+		.container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			border-radius: 50%;
+			height: 96px;
+			width: 96px;
+			animation: rotate_3922 1.2s linear infinite;
+			background-color: #9b59b6;
+			background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+		}
+
+		.container span {
+			position: absolute;
+			border-radius: 50%;
+			height: 100%;
+			width: 100%;
+			background-color: #9b59b6;
+			background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+		}
+
+		.container span:nth-of-type(1) {
+			filter: blur(5px);
+		}
+
+		.container span:nth-of-type(2) {
+			filter: blur(10px);
+		}
+
+		.container span:nth-of-type(3) {
+			filter: blur(25px);
+		}
+
+		.container span:nth-of-type(4) {
+			filter: blur(50px);
+		}
+
+		.container::after {
+			content: "";
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			background-color: #fff;
+			border: solid 5px #ffffff;
+			border-radius: 50%;
+		}
+
+		@keyframes rotate_3922 {
+			from {
+				transform: translate(-50%, -50%) rotate(0deg);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<span></span>
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<h1>A Vida é uma Jornada Sem Fim</h1>
+	<p>Com altos e baixos, começos e fins.</p>
+	<p>É uma história que se escreve dia a dia</p>
+	<p>Com momentos de riso e de melancolia.</p>
+	<p>Nessa viagem, a cada novo amanhecer,</p>
+	<p>Aprendemos a amar, a sorrir e a viver.</p>
+	<p>Com cada passo, descobrimos nosso caminho,</p>
+	<p>E seguimos em frente, rumo ao nosso destino.</p>
+
+	<script>
+		const toggleSwitch = document.querySelector('input[type="checkbox"]');
+		const currentTheme = localStorage.getItem('theme');
+
+		if (currentTheme) {
+			document.documentElement.setAttribute('data-theme', current
