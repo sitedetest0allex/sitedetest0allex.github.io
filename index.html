@@ -1,18 +1,91 @@
-
-<!DOCTYPE html>
 <html>
-  <head>
-    <title>Download de Fotos do Instagram</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1>Download de Fotos do Instagram</h1>
-      <form>
-        <input type="text" placeholder="Insira o link da foto do Instagram aqui">
-        <button type="submit">Download</button>
-      </form>
-    </div>
-    <script src="script.js"></script>
-  </body>
+<head>
+	<title>A Vida é uma Jornada Sem Fim</title>
+	<style>
+		body {
+			background-color: #1f2533;
+			color: #fff;
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+		
+		h1 {
+			font-size: 3em;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		
+		p {
+			font-size: 1.5em;
+			margin-bottom: 20px;
+			line-height: 1.5em;
+		}
+		
+		p:hover {
+			color: #ff5757;
+			cursor: pointer;
+		}
+		
+		@media only screen and (max-width: 768px) {
+			h1 {
+				font-size: 2em;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+			
+			p {
+				font-size: 1em;
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1>A Vida é uma Jornada Sem Fim</h1>
+	<p>Com altos e baixos, começos e fins.</p>
+	<p>É uma história que se escreve dia a dia</p>
+	<p>Com momentos de riso e de melancolia.</p>
+	<p>Nessa viagem, a cada novo amanhecer,</p>
+	<p>Aprendemos a amar, a sorrir e a viver.</p>
+	<p>Com cada passo, descobrimos nosso caminho,</p>
+	<p>E seguimos em frente, rumo ao nosso destino.</p>
+
+	<div id="imagem"></div>
+
+
+    
+
+
+	<style>
+		#imagem {
+			width: 400px;
+			height: 400px;
+			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkHGIZLV-b_U4BLTVhx4Vr2jt8W4DbNJ2SV_fMlxb6AQVwU3HD9xXm1jQ&s=10');
+			background-repeat: no-repeat;
+			background-size: cover;
+			transition: background-image 0.5s ease-in-out;
+			cursor: pointer;
+		}
+
+		#imagem:hover {
+			background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqc8pBkfBK-tOvxYdYnwtVm9V10WfVzOILpQ&usqp=CAU');
+		}
+	</style>
+
+	<script>
+		let paragraphs = document.getElementsByTagName("p");
+		let colors = ["#ff5757", "#7a5cff", "#e0c800", "#00d5ff", "#ff9d4d", "#ffffff"];
+		let currentColorIndex = 0;
+
+		for (let i = 0; i < paragraphs.length; i++) {
+			paragraphs[i].addEventListener("mouseover", function() {
+				this.style.color = colors[currentColorIndex];
+				currentColorIndex = (currentColorIndex + 1) % colors.length;
+			});
+
+			paragraphs[i].addEventListener("mouseout", function() {
+				this.style.color = "#fff";
+			});
+		}
+	</script>
+</body>
 </html>
