@@ -1,20 +1,39 @@
-* {
-    padding: 0; margin: 0; box-sizing: border-box;
-
-.container {
-
-display: flex;
-
-overflow-x: scroll; padding: 24px; height: 360px; scroll-snap-type: x mandatory; scroll-padding: 24px; border-radius: 8px;
-
-width: 300px;
-
-gap: 12px; margin: 2rem auto;
-
+body {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+	font-family: Arial, sans-serif;
 }
 
-.container .item { flex: e @ 100%;
+.container {
+	width: 80%;
+	margin: 0 auto;
+	text-align: center;
+}
 
-padding: 24px; border-radius: 8px; scroll-snap-align: start;
+h1 {
+	font-size: 3rem;
+	margin-top: 2rem;
+}
 
+.images {
+	margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.images img {
+	width: 300px;
+	height: 300px;
+	margin: 1rem;
+	object-fit: cover;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: transform 0.2s;
+}
+
+.images img:hover {
+	transform: scale(1.1);
 }
