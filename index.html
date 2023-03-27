@@ -93,6 +93,11 @@
 	<p>Com cada passo, descobrimos nosso caminho,</p>
 	<p>E seguimos em frente, rumo ao nosso destino.</p>
 
+	<label class="switch">
+	  <input type="checkbox">
+	  <span class="slider round"></span>
+	</label>
+
 	<script>
 		const toggleSwitch = document.querySelector('input[type="checkbox"]');
 		const currentTheme = localStorage.getItem('theme');
@@ -101,10 +106,4 @@
 			document.documentElement.setAttribute('data-theme', currentTheme);
 
 			if (currentTheme === 'dark') {
-				toggleSwitch.checked = true;
-			}
-		}
-
-		function switchTheme(e) {
-			if (e.target.checked) {
-				document
+				toggleSwitch.checked =
